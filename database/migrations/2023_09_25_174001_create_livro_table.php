@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CriaLivro extends Migration
+class CreateLivroTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,14 @@ class CriaLivro extends Migration
     {
         Schema::create('livro', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 100);
-            $table->string('autor', 45);
-            $table->string('isbn', 20)->nullable();
+            $table->string('titulo');
+            $table->string('autor');
+            $table->string('genero');
+            $table->string('qtd_paginas');
+            $table->date('data_emprestimo');
+            $table->date('data_devolucao');
+            $table->bool('disponibilidade');
+            $table->string('qtd_exemplares');
             $table->timestamps();
         });
     }
@@ -29,6 +34,6 @@ class CriaLivro extends Migration
      */
     public function down()
     {
-        Schema::drop('livro');
+        Schema::dropIfExists('livro');
     }
 }
