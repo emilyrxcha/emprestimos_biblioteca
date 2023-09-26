@@ -22,3 +22,11 @@ use App\Http\Controllers\PrincipalController;
 
 Route::get('/', [PrincipalController::class, 'index'])->name('index');
 Route::get('/livro', [LivroController::class, 'index'])->name('livros.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

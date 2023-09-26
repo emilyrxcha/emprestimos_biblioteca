@@ -17,13 +17,14 @@ class CreateLivroTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('autor');
-            $table->string('genero');
             $table->string('qtd_paginas');
             $table->date('data_emprestimo');
             $table->date('data_devolucao');
-            $table->bool('disponibilidade');
-            $table->string('qtd_exemplares');
+            $table->boolean('disponibilidade');
+            $table->foreignId('genero_id');
             $table->timestamps();
+
+            $table->foreign('genero_id')->references('id')->on('genero');
         });
     }
 
