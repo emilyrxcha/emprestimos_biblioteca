@@ -58,7 +58,9 @@
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
+    /*
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    */
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var( --bs-font-sans-serif);
@@ -4487,7 +4489,7 @@ fieldset:disabled .btn {
     --bs-card-cap-color: ;
     --bs-card-height: ;
     --bs-card-color: ;
-    --bs-card-bg: #838562;
+    --bs-card-bg: white;
     --bs-card-img-overlay-padding: 1rem;
     --bs-card-group-margin: 0.75rem;
     position: relative;
@@ -4500,6 +4502,7 @@ fieldset:disabled .btn {
     background-clip: border-box;
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
+    color: #311E0F;
 }
 
 .card>hr {
@@ -4612,6 +4615,10 @@ fieldset:disabled .btn {
 .card-img-top {
     border-top-left-radius: var(--bs-card-inner-border-radius);
     border-top-right-radius: var(--bs-card-inner-border-radius);
+    max-width: 150px;
+    max-height: 225px;
+    width: auto;
+    height: auto;
 }
 
 .card-img,
@@ -8501,6 +8508,10 @@ fieldset:disabled .btn {
     padding-bottom: 3rem !important;
 }
 
+.pb-6 {
+    padding-bottom: 5rem !important;
+}
+
 .ps-0 {
     padding-left: 0 !important;
 }
@@ -8803,7 +8814,7 @@ fieldset:disabled .btn {
 
 .bg-light {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+    background-color: #838562 !important;
 }
 
 .bg-dark {
@@ -11490,4 +11501,7 @@ header {
 section {
     padding-top: 9rem;
     padding-bottom: 9rem;
+    /*
+    background-color: #838562 !important;
+    */
 }
