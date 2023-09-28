@@ -4036,7 +4036,7 @@ fieldset:disabled .btn {
     --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
     --bs-navbar-brand-padding-y: 0.3125rem;
     --bs-navbar-brand-margin-end: 1rem;
-    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-font-size: 1.5rem;
     --bs-navbar-brand-color: #311E0F;
     --bs-navbar-brand-hover-color: #311E0F;
     --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -8494,6 +8494,7 @@ fieldset:disabled .btn {
 
 .pb-2 {
     padding-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
 }
 
 .pb-3 {

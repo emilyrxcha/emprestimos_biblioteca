@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
 use App\Http\Controllers\LivroController;
@@ -23,10 +22,11 @@ use App\Http\Controllers\SobreController;
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [PrincipalController::class, 'index'])->name('index');
+Route::get('/inicio', [App\Http\Controllers\PrincipalController::class, 'index'])->name('index');
 Route::get('/perfil', [App\Http\Controllers\UsuarioController::class, 'index'])->name('users.index');
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre.index');
 
-Route::get('/livros', [App\Http\Controllers\LivroController::class, 'index'])->name('livros.index');
+Route::get('/livro', [App\Http\Controllers\LivroController::class, 'index'])->name('livros.index');
 
 Auth::routes();
 
