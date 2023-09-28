@@ -7,7 +7,7 @@ use App\Http\Controllers\LivroController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\UsuarioController;
-
+use App\Http\Controllers\SobreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [PrincipalController::class, 'index'])->name('index');
 Route::get('/perfil', [App\Http\Controllers\UsuarioController::class, 'index'])->name('users.index');
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre.index');
+
+Route::get('/livros', [App\Http\Controllers\LivroController::class, 'index'])->name('livros.index');
 
 Auth::routes();
 
