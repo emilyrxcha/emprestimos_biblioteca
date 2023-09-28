@@ -25,6 +25,7 @@
                 </div>
             </div>
         </nav>
+
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white mt-3 pt-5 pb-2">
             <div class="container px-4 text-center">

@@ -14,14 +14,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * Class Emprestimo
  *
  * @property int $livro_id
- * @property int $aluno_id
+ * @property int $usuario_id
  * @property Carbon|null $datahora
  * @property Carbon|null $data_devolucao
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
- * @property Aluno $aluno
  * @property Livro $livro
+ * @property Emprestimo $emprestimo
  *
  * @package App\Models
  */
@@ -35,25 +35,29 @@ class Emprestimo extends Model
 	protected $casts = [
 		'id'		=> 'int',
 		'livro_id' => 'int',
-		'aluno_id' => 'int',
+		'usuario_id' => 'int',
 		'datahora' => 'datetime',
-		'data_devolucao' => 'datetime'
+		'data_devolucao' => 'datetime',
+		'created_at' => 'datetime',
+		'updated_at' => 'datetime'
 	];
 
 	protected $fillable = [
 		'livro_id',
-		'aluno_id',
+		'usuario_id',
 		'datahora',
-		'data_devolucao'
+		'data_devolucao',
+		'created_at',
+		'updated_at'
 	];
-
-	public function aluno()
-	{
-		return $this->belongsTo(Aluno::class, 'aluno_id');
-	}
 
 	public function livro()
 	{
 		return $this->belongsTo(Livro::class);
+	}
+
+	public function emprestimo()
+	{
+		return $this->belongsTo(Emprestimo::class);
 	}
 }

@@ -3,7 +3,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
-use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\PrincipalController;
@@ -30,3 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::fallback(function () {
+    return view('errors.404');
+});
