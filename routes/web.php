@@ -6,6 +6,7 @@ use App\Http\Controllers\TesteController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\UsuarioController;
 
 
 /*
@@ -19,16 +20,13 @@ use App\Http\Controllers\PrincipalController;
 |
 */
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/', [PrincipalController::class, 'index'])->name('index');
-Route::get('/livro', [LivroController::class, 'index'])->name('livros.index');
+Route::get('/perfil', [App\Http\Controllers\UsuarioController::class, 'index'])->name('users.index');
+Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre.index');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::fallback(function () {
     return view('errors.404');
