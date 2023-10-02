@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <form>
+    @csrf
     <div class="mb-3">
       <label for="titulo" class="form-label">Título do Livro</label>
       <input type="text" class="form-control" id="titulo" name="titulo">

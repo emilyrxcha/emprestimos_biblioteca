@@ -30,6 +30,8 @@ Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->na
 Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'index'])->name('livro.index');
 Route::get('/livros', [App\Http\Controllers\LivrosController::class, 'index'])->name('livros.index');
 Route::get('/criar-livro', [App\Http\Controllers\LivroController::class, 'create'])->name('livro.create');
+Route::post('/criar-livro', [App\Http\Controllers\LivroController::class, 'store'])->name('livro.store');
+
 Auth::routes();
 
 Route::fallback(function () {
