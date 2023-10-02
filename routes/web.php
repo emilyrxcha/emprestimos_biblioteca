@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
 use App\Http\Controllers\LivroController;
+use App\Http\Controllers\LivrosController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\UsuarioController;
@@ -26,8 +27,9 @@ Route::get('/inicio', [App\Http\Controllers\PrincipalController::class, 'index']
 Route::get('/perfil', [App\Http\Controllers\UsuarioController::class, 'index'])->name('users.index');
 Route::get('/sobre', [App\Http\Controllers\SobreController::class, 'index'])->name('sobre.index');
 
-Route::get('/livro', [App\Http\Controllers\LivroController::class, 'index'])->name('livros.index');
-
+Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'index'])->name('livro.index');
+Route::get('/livros', [App\Http\Controllers\LivrosController::class, 'index'])->name('livros.index');
+Route::get('/criar-livro', [App\Http\Controllers\LivroController::class, 'create'])->name('livro.create');
 Auth::routes();
 
 Route::fallback(function () {

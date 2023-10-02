@@ -18,8 +18,10 @@ class CreateLivroTable extends Migration
             $table->string('titulo');
             $table->string('autor');
             $table->string('qtd_paginas');
+            $table->text('sinopse');
+            $table->text('isbn');
             $table->date('data_emprestimo');
-            $table->date('data_devolucao');
+            $table->date('data_devolucao')->nullablle();
             $table->boolean('disponibilidade');
             $table->foreignId('genero_id');
             $table->timestamps();

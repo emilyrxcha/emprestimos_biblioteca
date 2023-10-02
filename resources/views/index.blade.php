@@ -7,7 +7,7 @@
         <div class="container px-4 px-lg-5 mt-1">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center pb-4"><input type="text" name="" id="" placeholder="Pesquisar" class="input-group input-text form-control"></div>
         </div>
-        <header class="bg-dark py-5">
+        <header class="bg-dark py-5 back">
             <div class="container px-5 px-lg-5 my-0">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Livros disponíveis</h1>
@@ -17,6 +17,7 @@
         <!-- Section-->
         <section class="py-1">
             <div class="container px-4 px-lg-5 mt-3">
+                @foreach ($livros as $livro)
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5 w-auto">
                         <div class="card h-100">
@@ -26,18 +27,20 @@
                             <div class="card-body p-2">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Título</h5>
+                                    <h5 class="fw-bolder">{{$livro->titulo}}</h5>
                                     <!-- Product price-->
-                                    Autor
+                                    {{$livro->autor}}
+                                    {{$livro->qtd_paginas}}
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="livro">Obter</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('livro.index', $livro->id)}}">Ver</a></div>
                             </div>
                         </div>  
                     </div>
                 </div>
+                @endforeach
             </div>
         </section>
         <!-- Footer-->

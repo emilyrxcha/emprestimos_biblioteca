@@ -8818,11 +8818,6 @@ fieldset:disabled .btn {
     background-color: #838562 !important;
 }
 
-.bg-dark {
-    --bs-bg-opacity: 1;
-    background-color: #525032 !important;
-}
-
 .bg-black {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;

@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Livro;
 use Illuminate\Http\Request;
+use DB;
 
 class LivroController extends Controller
 {
 
-    public function index(Request $request) {
-        return view('livros.index');
+    public function index(Request $request, $id) {
+        $livro = Livro::findOrFail($id);
+        return view('livro.index', compact('livro'));
     }
 
     public function create(Request $request) {
-        return view('livros.create');
+        $generos = DB::table('genero')->get();
+        return view('livro.create', compact('generos'));
     }
 
     public function store(Request $request) {
@@ -26,9 +29,12 @@ class LivroController extends Controller
         ]);
 
         $obj            = new Livro();
-        $obj->nome      = $request->nome;
+        $obj->titulo    = $request->titulo;
         $obj->autor     = $request->autor;
         $obj->isbn      = $request->isbn;
+        $obj->sinopse   = $request->sinopse;
+        $obj->qtd_paginas = $request->qtd_paginas;
+        $obj->genero_id = $request->genero_id;
         $obj->save();
 
         return redirect()->route('livros.index');
