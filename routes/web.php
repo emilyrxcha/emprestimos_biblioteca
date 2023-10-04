@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TesteController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\LivrosController;
+use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\UsuarioController;
@@ -31,6 +32,10 @@ Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'index']
 Route::get('/livros', [App\Http\Controllers\LivrosController::class, 'index'])->name('livros.index');
 Route::get('/criar-livro', [App\Http\Controllers\LivroController::class, 'create'])->name('livro.create');
 Route::post('/criar-livro', [App\Http\Controllers\LivroController::class, 'store'])->name('livro.store');
+
+Route::get('/genero', [App\Http\Controllers\GeneroController::class, 'index'])->name('genero.index');
+Route::get('/criar-genero', [App\Http\Controllers\GeneroController::class, 'create'])->name('genero.create');
+Route::post('/criar-genero', [App\Http\Controllers\GeneroController::class, 'store'])->name('genero.store');
 
 Auth::routes();
 
