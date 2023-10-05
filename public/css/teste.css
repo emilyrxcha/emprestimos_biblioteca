@@ -1,0 +1,12 @@
+.h1_header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xxx-large;
+    font-weight: 600;
+    margin-top: -50px;
+}
+
+.fundo_header {
+    background-color: #525032;
+    height: 150px;
+    margin-top: -50px;
+}

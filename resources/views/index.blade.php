@@ -5,12 +5,12 @@
     <body>
         <!-- Header-->
         <div class="container px-4 px-lg-5 mt-1">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center pb-4"><input type="text" name="" id="" placeholder="Pesquisar" class="input-group input-text form-control"></div>
+
         </div>
-        <header class="bg-dark py-5 back">
+        <header class="fundo_header">
             <div class="container px-5 px-lg-5 my-0">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Livros disponíveis</h1>
+                    <h1 class="h1_header">Livros disponíveis</h1>
                 </div>
             </div>
         </header>

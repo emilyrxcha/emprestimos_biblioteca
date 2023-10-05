@@ -18,7 +18,7 @@
 </head>
 <body>
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light navbarcor">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand">Biblioexpress</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -29,6 +29,14 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('sobre.index')}}">Sobre</a></li> 
                     </ul>
                 </div>
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text"  style="margin-left: 50px; margin-top:15px" class="form-control" placeholder="Pesquisar" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2" style="margin-top:15px">
+                        <img src="https://cdn-icons-png.flaticon.com/512/149/149852.png"alt="pesquisar" width="20px">
+                      </span>
+                    </div>
+                  </div>
             </div>
         </nav>
     <div id="app">

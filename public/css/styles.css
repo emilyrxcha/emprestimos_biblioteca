@@ -4069,6 +4069,10 @@ fieldset:disabled .btn {
     justify-content: space-between;
 }
 
+.navbarcor {
+    background-color: #838562;
+}
+
 .navbar-brand {
     padding-top: var(--bs-navbar-brand-padding-y);
     padding-bottom: var(--bs-navbar-brand-padding-y);
