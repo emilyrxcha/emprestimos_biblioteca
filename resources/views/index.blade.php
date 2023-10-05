@@ -10,7 +10,7 @@
         <header class="fundo_header">
             <div class="container px-5 px-lg-5 my-0">
                 <div class="text-center text-white">
-                    <h1 class="h1_header">Livros disponíveis</h1>
+                    <h1 class="display-4 fw-bolder h1_header">Livros disponíveis</h1>
                 </div>
             </div>
         </header>

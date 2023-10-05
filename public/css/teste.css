@@ -1,12 +1,62 @@
+body {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
 .h1_header {
-    font-family: 'Times New Roman', Times, serif;
     font-size: xxx-large;
     font-weight: 600;
-    margin-top: -50px;
 }
 
 .fundo_header {
     background-color: #525032;
-    height: 150px;
-    margin-top: -50px;
+}
+
+.titulo_card {
+    color: white;
+    background-color: #525032 !important;
+}
+
+.botao {
+    color: #311E0F;
+    border: none;
+    border-radius: 0.375rem;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #D1AE8D;
+    /*
+    margin-left: 40px;
+    margin-bottom: 10px;
+    */
+}
+
+.link_botao {
+    color: #311E0F;
+}
+
+.link_botao:hover {
+    color: #311E0F;
+}
+
+.texto_navbar {
+    color: white;
+}
+
+.cor_navbar {
+    background-color: #838562;
+}
+
+.pesquisa {
+    width: 80%;
+}
+
+.criar {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.erro {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
